@@ -13,8 +13,7 @@ function checkFilesAvailabilityByChunk($size, $chunk_start = 0) {
 			FROM images 
 			WHERE id > @chunk
 			ORDER BY id
-			LIMIT ".$size."
-			";
+			LIMIT ".$size;
 
 		// Get Chunk
 		$chunk = Db::query($query);
